@@ -1,0 +1,15 @@
+<div class="container mx-auto px-4">
+  <% if @all_projects.empty? %>
+    <p>There are no projects currently.</p>
+    <%= link_to 'Click here to create a new project', new_project_path %>
+  <% else %>
+    <% if @projects.empty? %>
+      <p>You are not yet part of any projects.</p>
+      <%= link_to 'Click here to create a new project', new_project_path %>
+    <% else %>
+      <%= render 'projects_table', projects: @projects, title: 'My Projects' %>
+    <% end %>
+
+    <%= render 'projects_table', projects: @all_projects, title: 'All Projects' %>
+  <% end %>
+</div>

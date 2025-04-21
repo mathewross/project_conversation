@@ -1,0 +1,18 @@
+<div class="container mx-auto px-4 mt-10">
+  <%= link_to 'Back', projects_path, class: 'inline float-right text-2xl border-1 border-blue-500' %>
+  <h1 class="text-4xl font-extrabold"><%= @project.name %></h1>
+  <textarea rows="4" readonly class="w-full bg-white border-1 border-gray-200"><%= @project.description %></textarea>
+  Status: <%= @project.status.humanize %>
+
+  <%= render 'comments/form' %>
+
+  <div class="flex justify-between items-center mb-6">
+    <h2 class="text-lg lg:text-2xl font-bold">Discussion</h2>
+  </div>
+
+  <div id="updates">
+    <% @project.updates.not_reply.each do |update| %>
+      <%= render 'update', update: update %>
+    <% end %>
+  </div>
+</div>

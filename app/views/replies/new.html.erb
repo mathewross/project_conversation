@@ -1,0 +1,10 @@
+<%= turbo_frame_tag "modal" do %>
+  <%= tag.div data: { controller: "turbo-modal", action: "turbo:submit-end->turbo-modal#submitEnd" }, class: "mx-auto sm:w-1/2 md:w-1/2 fixed inset-0 flex items-center" do %>
+    <div class="relative p-4 w-full max-w-2xl max-h-full">
+      <!-- Modal content -->
+      <div class="relative bg-white rounded-lg shadow-sm">
+        <%= render "form", reply: @reply %>
+      </div>
+    </div>
+  <% end %>
+<% end %>
