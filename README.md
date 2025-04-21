@@ -10,4 +10,6 @@ PostgreSQL<br/>
   Simple project management platform, where users can sign up, join projects and discuss each project.
 </p>
 
+<p>Hosted link: https://project-conversation-ogcn.onrender.com/</p>
 
+<p>Due to using the free tier of hosting on Render, your first request to the site may take up to 1 minute to load. This is because Render spins down the service on idle.</p>
